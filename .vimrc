@@ -3,6 +3,7 @@ call plug#begin('~/vimfiles/plugged')
 Plug 'altercation/vim-colors-solarized'
 Plug 'scrooloose/nerdtree'
 Plug 'godlygeek/tabular'
+Plug 'kien/ctrlp.vim'
 call plug#end()
 
 set nocompatible

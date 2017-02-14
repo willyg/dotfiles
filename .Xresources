@@ -1,0 +1,16 @@
+Xft.autohint: false
+Xft.dpi: 96
+Xft.antialias: true
+Xft.rgba: rgb
+Xft.hinting: true
+Xft.hintstyle: hintslight
+Xft.lcdfilter: lcddefault
+
+!Xterm settings
+XTerm*faceName: Inconsolata
+XTerm*faceSize: 11
+XTerm*selectToClipboard: true
+
+XTerm*termName: xterm-256color
+XTerm*background: #002b36
+XTerm*foreground: #839496

@@ -1,28 +1,24 @@
-"Install https://github.com/junegunn/vim-plug
-call plug#begin('~/vimfiles/plugged')
-Plug 'altercation/vim-colors-solarized'
-Plug 'scrooloose/nerdtree'
-Plug 'godlygeek/tabular'
-Plug 'kien/ctrlp.vim'
-call plug#end()
+"git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'scrooloose/nerdtree'
+call vundle#end()
 
 set nocompatible
-syntax on
 set autoindent
 set ignorecase
 set hlsearch
 set incsearch
 set smartindent
-set shiftwidth=2
-set tabstop=2
+set shiftwidth=4
+set tabstop=4
 set expandtab
 map <F2> :NERDTreeToggle<CR>
-filetype off
+syntax enable
+filetype on
 filetype indent on
 filetype plugin on
 autocmd filetype javascript set sw=2 ts=2 expandtab
 autocmd filetype html set sw=2 ts=2 expandtab
 autocmd filetype css set sw=2 ts=2 expandtab
-set backspace=2
-colorscheme solarized
-set guifont=Consolas:h10

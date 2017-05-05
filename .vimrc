@@ -28,4 +28,4 @@ autocmd filetype css set sw=2 ts=2 expandtab
 map <F2> :NERDTreeToggle<CR>
 let g:user_emmet_expandabbr_key='<C-E>'
 colorscheme solarized
-set guifont=Consolas:h10
+"set guifont=Consolas:h10

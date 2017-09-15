@@ -2,8 +2,7 @@
 "call plug#begin('~/vimfiles/plugged')
 call plug#begin('~/vim/plugged')
 Plug 'scrooloose/nerdtree'
-Plug 'altercation/vim-colors-solarized'
-Plug 'ctrlpvim/ctrlp'
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'mattn/emmet-vim'
 call plug#end()
 
@@ -27,5 +26,4 @@ autocmd filetype css set sw=2 ts=2 expandtab
 
 map <F2> :NERDTreeToggle<CR>
 let g:user_emmet_expandabbr_key='<C-E>'
-colorscheme solarized
 "set guifont=Consolas:h10

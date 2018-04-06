@@ -12,5 +12,29 @@ XTerm*faceSize: 11
 XTerm*selectToClipboard: true
 
 XTerm*termName: xterm-256color
-XTerm*background: #002b36
-XTerm*foreground: #839496
+
+XTerm*foreground:   #93a1a1
+XTerm*background:   #002b36
+XTerm*cursorColor:  #93a1a1
+XTerm*color0:       #002b36
+XTerm*color1:       #dc322f
+XTerm*color2:       #859900
+XTerm*color3:       #b58900
+XTerm*color4:       #268bd2
+XTerm*color5:       #6c71c4
+XTerm*color6:       #2aa198
+XTerm*color7:       #93a1a1
+XTerm*color8:       #657b83
+XTerm*color9:       #dc322f
+XTerm*color10:      #859900
+XTerm*color11:      #b58900
+XTerm*color12:      #268bd2
+XTerm*color13:      #6c71c4
+XTerm*color14:      #2aa198
+XTerm*color15:      #fdf6e3
+XTerm*color16:      #cb4b16
+XTerm*color17:      #d33682
+XTerm*color18:      #073642
+XTerm*color19:      #586e75
+XTerm*color20:      #839496
+XTerm*color21:      #eee8d5

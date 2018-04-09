@@ -1,0 +1,2 @@
+apt install xorg xdm rxvt-unicode-256color i3-wm i3status fonts-inconsolata vim tmux curl
+apt install linux-headers-amd64 linux-headers-4.9.0-4-amd64 make

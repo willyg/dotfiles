@@ -1,2 +1,8 @@
-apt install xorg xdm rxvt-unicode-256color i3 fonts-inconsolata vim tmux curl
+# TERM
+apt install xorg xdm rxvt-unicode-256color i3 fonts-inconsolata
+
+# Tools
+apt install vim tmux curl git net-tools
+
+# For Virtualbox guest install
 apt install linux-headers-amd64 linux-headers-4.9.0-4-amd64 make

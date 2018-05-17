@@ -3,27 +3,30 @@
 call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'mattn/emmet-vim'
+Plug 'altercation/vim-colors-solarized'
+Plug 'tpope/vim-sensible'
 call plug#end()
 
 set nocompatible
-set autoindent
 set ignorecase
-set hlsearch
-set incsearch
-set smartindent
 set shiftwidth=4
 set tabstop=4
 set expandtab
-syntax enable
-filetype on
-filetype indent on
-filetype plugin on
-set backspace=2
-autocmd filetype javascript set sw=2 ts=2 expandtab
-autocmd filetype html set sw=2 ts=2 expandtab
-autocmd filetype css set sw=2 ts=2 expandtab
+autocmd filetype javascript,html,css,yaml set shiftwidth=2 tabstop=2
+autocmd filetype make set shiftwidth=4 tabstop=4 noexpandtab
 
 map <F2> :NERDTreeToggle<CR>
-let g:user_emmet_expandabbr_key='<C-E>'
-"set guifont=Consolas:h10
+
+set background=dark
+colorscheme solarized
+
+"autocomplete
+inoremap ( ()<Left>
+inoremap { {}<Left>
+inoremap [ []<Left>
+inoremap (<CR> (<CR>)<Esc>O
+inoremap {<CR> {<CR>}<Esc>O
+inoremap [<CR> [<CR>]<Esc>O
+inoremap ` ``<Left>
+inoremap ' ''<Left>
+inoremap " ""<Left>

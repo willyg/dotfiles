@@ -3,7 +3,6 @@
 call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'altercation/vim-colors-solarized'
 Plug 'tpope/vim-sensible'
 call plug#end()
 
@@ -18,7 +17,6 @@ autocmd filetype make set shiftwidth=4 tabstop=4 noexpandtab
 map <F2> :NERDTreeToggle<CR>
 
 set background=dark
-colorscheme solarized
 
 "autocomplete
 inoremap ( ()<Left>

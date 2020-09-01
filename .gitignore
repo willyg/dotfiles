@@ -1,5 +1,6 @@
 *
 !.gitignore
+!.install.sh
 !.ssh/config
 !.tmux.conf
 !.vimrc

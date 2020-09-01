@@ -1,26 +1,34 @@
 #!/bin/sh
 
-echo 'Start X on start'
-grep -q startx ~/.profile || cat <<EOF >> ~/.profile
+if ! grep -q startx ~/.profile; then
+    echo 'Start X on start'
+    cat <<EOF >> ~/.profile
 
 if [[ -z "\$DISPLAY" ]] && [[ \$(tty) = /dev/tty1 ]]; then
     . startx
     logout
 fi
 EOF
-
-echo 'Set vim as editor'
-grep -q EDITOR ~/.profile || echo 'export EDITOR=vim' >> ~/.profile
-
-echo 'Generate i3 config'
-i3-config-wizard -m win
-grep -q new_window ~/.config/i3/config || echo 'new_window 1pixel' >> ~/.config/i3/config
-
-echo 'Set $TERM for ssh'
-grep -q ssh ~/.bashrc || echo "alias ssh='TERM=xterm-256color ssh'" >> ~/.bashrc
-
-echo 'Install vim-plug'
-if [ ! -d "~/.vim" ]; then
-    curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 fi
-vim +'PlugInstall --sync' +qa
+
+if ! grep -q EDITOR ~/.profile; then
+    echo 'Set vim as editor'
+    echo 'export EDITOR=vim' >> ~/.profile
+fi
+
+if [ ! -f ~/.config/i3/config ]; then
+    echo 'Generate i3 config'
+    i3-config-wizard -m win
+    echo 'new_window 1pixel' >> ~/.config/i3/config
+fi
+
+if ! grep -q ssh ~/.bashrc; then
+    echo 'Set $TERM for ssh'
+    echo "alias ssh='TERM=xterm-256color ssh'" >> ~/.bashrc
+fi
+
+if [ ! -d ~/.vim ]; then
+    echo 'Install vim-plug'
+    curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    vim +'PlugInstall --sync' +qa
+fi

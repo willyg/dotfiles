@@ -16,9 +16,8 @@ if ! grep -q EDITOR ~/.profile; then
     echo 'export EDITOR=vim' >> ~/.profile
 fi
 
-if [ ! -f ~/.config/i3/config ]; then
-    echo 'Generate i3 config'
-    i3-config-wizard -m win
+if ! grep -q new_window ~/.config/i3/config; then
+    echo 'Set i3 window to 1 pixel'
     echo 'new_window 1pixel' >> ~/.config/i3/config
 fi
 

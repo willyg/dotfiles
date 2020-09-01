@@ -10,7 +10,12 @@
 # Setup (as user)
 
 ### Clone repo
-`git clone git@github.com:willyg/dotfiles.git`
+```
+git clone https://github.com/willyg/dotfiles
+mv dotfiles/.git .
+rm dotfiles/ -rf
+git reset --hard master
+```
 
 ### Install packages
 `sudo bash .install.sh`

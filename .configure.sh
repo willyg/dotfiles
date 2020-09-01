@@ -17,7 +17,7 @@ echo 'Set $TERM for ssh'
 grep -q ssh ~/.bashrc || echo "alias ssh='TERM=xterm-256color ssh'" >> ~/.bashrc
 
 echo 'Install vim-plug'
-if [ ! -d "~/.vim"]; then
+if [ ! -d "~/.vim" ]; then
     curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 fi
 vim +'PlugInstall --sync' +qa

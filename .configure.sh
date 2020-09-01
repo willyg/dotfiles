@@ -1,13 +1,16 @@
 #!/bin/sh
 
 echo 'Start X on start'
-grep -q startx ~/.profile || cat <<EOF >> .profile
+grep -q startx ~/.profile || cat <<EOF >> ~/.profile
 
 if [[ -z "\$DISPLAY" ]] && [[ \$(tty) = /dev/tty1 ]]; then
     . startx
     logout
 fi
 EOF
+
+echo 'Set vim as editor'
+grep -q EDITOR ~/.profile || echo 'export EDITOR=vim' >> ~/.profile
 
 echo 'Generate i3 config'
 i3-config-wizard -m win

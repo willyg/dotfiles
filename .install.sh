@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # TERM
-apt install xorg nodm rxvt-unicode-256color i3 fonts-inconsolata -y
+apt install xorg rxvt-unicode-256color i3 fonts-inconsolata -y
 
 # Tools
 apt install vim tmux curl net-tools -y

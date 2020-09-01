@@ -1,4 +1,6 @@
 *
+!.configure.sh
+!.configure_sudo.sh
 !.gitignore
 !.install.sh
 !.ssh/config

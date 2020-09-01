@@ -19,3 +19,9 @@ git reset --hard master
 
 ### Install packages
 `sudo bash .install.sh`
+
+### Configure system
+```
+bash .configure.sh
+sudo bash .configure_sudo.sh
+```

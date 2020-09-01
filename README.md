@@ -23,5 +23,5 @@ git reset --hard master
 ### Configure system
 ```
 bash .configure.sh
-sudo bash .configure_sudo.sh
+sudo bash .configure_sudo.sh $USER
 ```

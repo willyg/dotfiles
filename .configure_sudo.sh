@@ -1,6 +1,6 @@
 #!/bin/sh
 
-$USERNAME=$1
+USERNAME=$1
 
 mkdir -p /etc/systemd/system/getty@tty1.service.d/
 

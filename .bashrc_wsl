@@ -1,0 +1,20 @@
+alias 'poweroff=rm /tmp/* -rf; /mnt/c/Windows/System32/wsl.exe --shutdown'
+
+#WSL time sync workaround https://github.com/microsoft/WSL/issues/5324
+if [ $(pgrep -f hwclock | wc -l) -lt 1 ]; then
+    setsid nohup watch -n 60 sudo hwclock -s &> /dev/null &
+fi
+
+
+# SSH Agent Setup
+SSH_AGENT=~/.ssh/agent
+if [ ! -f $SSH_AGENT ]; then
+    ssh-agent > $SSH_AGENT && source $SSH_AGENT > /dev/null
+else
+    AGENT_PID=$(pgrep ssh-agent)
+    if [ -z "$AGENT_PID" ] || grep -sq "$AGENT_PID" $SSH_AGENT; then
+        pkill ssh-agent
+        ssh-agent > $SSH_AGENT
+    fi
+    source $SSH_AGENT > /dev/null
+fi

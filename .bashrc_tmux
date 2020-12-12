@@ -1,0 +1,2 @@
+# Always start in tmux session
+test $TMUX || tmux attach -t default || tmux new -s default

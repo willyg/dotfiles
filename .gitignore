@@ -7,4 +7,6 @@
 !.tmux.conf
 !.vimrc
 !.Xresources
-
+!.bashrc_git
+!.bashrc_tmux
+!.bashrc_wsl

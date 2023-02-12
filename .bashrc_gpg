@@ -1,0 +1,5 @@
+PASS_FILE="${HOME}/.gnupg/pass.txt"
+alias encrypt="gpg --symmetric --cipher-algo AES256 --batch --passphrase-file ${PASS_FILE} $1"
+alias decrypt="gpg --batch --passphrase-file ${PASS_FILE} $1"
+alias unlock="gpg ${PASS_FILE}.gpg"
+alias lock="rm -f ${PASS_FILE}; gpg-connect-agent reloadagent /bye"
